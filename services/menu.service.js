@@ -2,13 +2,12 @@ const express = require('express')
 
 module.exports = {
     getMenu: (req, res) => {
-        const menu = {
-            'Number 9': 1.99,
-            'Number 9 Large': 2.99,
-            'Number 6 with Extra Dip': 3.25,
-            'Number 7': 3.99,
-            'Number 45': 3.45
-        }
+        const menu = [
+            { 'name': 'Steak' },
+            { 'name': 'Stew' },
+            { 'name': 'Soup'},
+            { 'name': 'Salad' },
+        ]
 
         return res.status(200).json({ menu: menu })
     }
