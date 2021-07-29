@@ -13,6 +13,6 @@ module.exports = {
         let token = authToken && authToken.replace('Bearer ', '');
         let decoded = jwt.decode(token, {complete: true});
         let user = decoded.payload.user
-        return res.status(200).json({ menu: menu,  user: user, headers: req.headers, body: req.body, params: req.params })
+        return res.status(200).json({ menu: menu, requestContext: req.requestContext,user: user, headers: req.headers, body: req.body, params: req.params })
     }
 }
