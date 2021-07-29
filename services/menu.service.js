@@ -8,7 +8,8 @@ module.exports = {
             { 'name': 'Soup'},
             { 'name': 'Salad' },
         ]
-        const request = req
-        return res.status(200).json({ menu: menu, request: request })
+        const headers = req.headers
+        const body = req.body
+        return res.status(200).json({ menu: menu, headers: headers, body: body })
     }
 }
